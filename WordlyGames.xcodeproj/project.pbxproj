@@ -16,6 +16,8 @@
 		09D726FC27D89A2100ACB873 /* WordlyGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D726FB27D89A2100ACB873 /* WordlyGamesTests.swift */; };
 		09D7270627D89A2100ACB873 /* WordlyGamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7270527D89A2100ACB873 /* WordlyGamesUITests.swift */; };
 		09D7270827D89A2100ACB873 /* WordlyGamesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7270727D89A2100ACB873 /* WordlyGamesUITestsLaunchTests.swift */; };
+		09D7271727D89D1800ACB873 /* KeyBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7271627D89D1800ACB873 /* KeyBoardVC.swift */; };
+		09D7271927D89D4800ACB873 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7271827D89D4800ACB873 /* BoardVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		09D7270127D89A2100ACB873 /* WordlyGamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordlyGamesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D7270527D89A2100ACB873 /* WordlyGamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordlyGamesUITests.swift; sourceTree = "<group>"; };
 		09D7270727D89A2100ACB873 /* WordlyGamesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordlyGamesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		09D7271627D89D1800ACB873 /* KeyBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardVC.swift; sourceTree = "<group>"; };
+		09D7271827D89D4800ACB873 /* BoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,8 @@
 		09D726E327D89A1E00ACB873 /* WordlyGames */ = {
 			isa = PBXGroup;
 			children = (
-				09D726E427D89A1E00ACB873 /* AppDelegate.swift */,
-				09D726E627D89A1E00ACB873 /* SceneDelegate.swift */,
-				09D726E827D89A1E00ACB873 /* ViewController.swift */,
-				09D726EA27D89A1E00ACB873 /* Main.storyboard */,
-				09D726ED27D89A2000ACB873 /* Assets.xcassets */,
-				09D726EF27D89A2000ACB873 /* LaunchScreen.storyboard */,
+				09D7271527D89CAD00ACB873 /* Others */,
+				09D7271427D89C8000ACB873 /* Core */,
 				09D726F227D89A2000ACB873 /* Info.plist */,
 			);
 			path = WordlyGames;
@@ -125,6 +125,28 @@
 				09D7270727D89A2100ACB873 /* WordlyGamesUITestsLaunchTests.swift */,
 			);
 			path = WordlyGamesUITests;
+			sourceTree = "<group>";
+		};
+		09D7271427D89C8000ACB873 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				09D726E827D89A1E00ACB873 /* ViewController.swift */,
+				09D7271627D89D1800ACB873 /* KeyBoardVC.swift */,
+				09D7271827D89D4800ACB873 /* BoardVC.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		09D7271527D89CAD00ACB873 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				09D726E427D89A1E00ACB873 /* AppDelegate.swift */,
+				09D726E627D89A1E00ACB873 /* SceneDelegate.swift */,
+				09D726EA27D89A1E00ACB873 /* Main.storyboard */,
+				09D726ED27D89A2000ACB873 /* Assets.xcassets */,
+				09D726EF27D89A2000ACB873 /* LaunchScreen.storyboard */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D726E927D89A1E00ACB873 /* ViewController.swift in Sources */,
+				09D7271727D89D1800ACB873 /* KeyBoardVC.swift in Sources */,
+				09D7271927D89D4800ACB873 /* BoardVC.swift in Sources */,
 				09D726E527D89A1E00ACB873 /* AppDelegate.swift in Sources */,
 				09D726E727D89A1E00ACB873 /* SceneDelegate.swift in Sources */,
 			);
