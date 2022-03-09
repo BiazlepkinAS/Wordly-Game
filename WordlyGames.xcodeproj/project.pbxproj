@@ -18,6 +18,7 @@
 		09D7270827D89A2100ACB873 /* WordlyGamesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7270727D89A2100ACB873 /* WordlyGamesUITestsLaunchTests.swift */; };
 		09D7271727D89D1800ACB873 /* KeyBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7271627D89D1800ACB873 /* KeyBoardVC.swift */; };
 		09D7271927D89D4800ACB873 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7271827D89D4800ACB873 /* BoardVC.swift */; };
+		09D7271B27D8CA6200ACB873 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7271A27D8CA6200ACB873 /* KeyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		09D7270727D89A2100ACB873 /* WordlyGamesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordlyGamesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		09D7271627D89D1800ACB873 /* KeyBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardVC.swift; sourceTree = "<group>"; };
 		09D7271827D89D4800ACB873 /* BoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
+		09D7271A27D8CA6200ACB873 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				09D726E827D89A1E00ACB873 /* ViewController.swift */,
 				09D7271627D89D1800ACB873 /* KeyBoardVC.swift */,
 				09D7271827D89D4800ACB873 /* BoardVC.swift */,
+				09D7271A27D8CA6200ACB873 /* KeyCell.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				09D726E927D89A1E00ACB873 /* ViewController.swift in Sources */,
 				09D7271727D89D1800ACB873 /* KeyBoardVC.swift in Sources */,
 				09D7271927D89D4800ACB873 /* BoardVC.swift in Sources */,
+				09D7271B27D8CA6200ACB873 /* KeyCell.swift in Sources */,
 				09D726E527D89A1E00ACB873 /* AppDelegate.swift in Sources */,
 				09D726E727D89A1E00ACB873 /* SceneDelegate.swift in Sources */,
 			);
