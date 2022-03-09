@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol KeyBoardVCDelegate: AnyObject {
+    func keyBoardVC(_ vc: KeyBoardVC, didTapKey letter: Character)
+}
+
 class KeyBoardVC: UIViewController,UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    weak var delegate: KeyBoardVCDelegate?
     
     let letters = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
     
@@ -32,7 +38,7 @@ class KeyBoardVC: UIViewController,UICollectionViewDelegateFlowLayout, UICollect
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 1),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         
         ])
@@ -85,6 +91,9 @@ extension KeyBoardVC {
         return UIEdgeInsets(top: 2, left: left, bottom: 2, right: right)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let letter = keys[indexPath.section][indexPath.row]
+        delegate?.keyBoardVC(self, didTapKey: letter)
         
     }
     
