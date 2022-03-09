@@ -32,7 +32,7 @@ class KeyBoardVC: UIViewController,UICollectionViewDelegateFlowLayout, UICollect
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 1),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         
         ])
@@ -41,7 +41,6 @@ class KeyBoardVC: UIViewController,UICollectionViewDelegateFlowLayout, UICollect
             keys.append(charts)
         }
     }
-
 }
 
 extension KeyBoardVC {
@@ -58,6 +57,8 @@ extension KeyBoardVC {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeyCell.identifier, for: indexPath) as? KeyCell else {
             fatalError()
         }
+        let letter = keys[indexPath.section][indexPath.row]
+        cell.configure(with: letter)
         return cell
     }
     
@@ -66,10 +67,22 @@ extension KeyBoardVC {
         let margin: CGFloat = 20
         let size: CGFloat = (collectionView.frame.size.width-margin)/10
         
-        return CGSize(width: 50, height: size)
+        return CGSize(width: size, height: size*1.5)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .zero
+        
+        var left: CGFloat = 1
+        var right: CGFloat = 1
+    
+        let margin: CGFloat = 20
+        let size: CGFloat = (collectionView.frame.size.width-margin)/10
+        let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
+        
+        let insert: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count))/2
+        left = insert
+        right = insert
+                                     
+        return UIEdgeInsets(top: 2, left: left, bottom: 2, right: right)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
